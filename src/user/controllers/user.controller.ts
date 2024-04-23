@@ -1,10 +1,10 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { User } from 'src/entities/user.entity';
-import { ProviderService } from 'src/provider/provider.service';
+import { UserService } from '../services/user.service';
 
 @Controller('custom')
-export class CustomController {
-  constructor(private service: ProviderService) {}
+export class UserController {
+  constructor(private service: UserService) {}
 
   @Get('hello')
   hello(): string {
